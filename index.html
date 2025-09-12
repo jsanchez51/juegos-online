@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Chimuelo Platformer (demo)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div id="ui">
+      <h1>Chimuelo Platformer</h1>
+      <div class="controls">
+        <span>Controles: A/D o ←/→ mover, W/↑/Espacio saltar, Shift correr, F volar, X fuego. Z giro, V rugido, B baile, N saltos múltiples. R reiniciar, T teletransporte, G liberarse, M menú niveles.</span>
+      </div>
+    </div>
+    <canvas id="game" width="960" height="540"></canvas>
+    
+    <!-- Mobile Controls -->
+    <div id="mobile-controls">
+      <div class="control-group left-controls">
+        <button id="btn-left" class="control-btn move-btn">←</button>
+        <button id="btn-right" class="control-btn move-btn">→</button>
+      </div>
+      <div class="control-group center-controls">
+        <button id="btn-jump" class="control-btn jump-btn">SALTO</button>
+        <button id="btn-run" class="control-btn run-btn">CORRER</button>
+        <button id="btn-superjump" class="control-btn superjump-btn">SÚPER SALTO</button>
+      </div>
+      <div class="control-group right-controls">
+        <button id="btn-fly" class="control-btn fly-btn">VOLAR</button>
+        <button id="btn-fire" class="control-btn fire-btn">FUEGO</button>
+      </div>
+      <div class="control-group utility-controls">
+        <button id="btn-reset" class="control-btn utility-btn">R</button>
+        <button id="btn-teleport" class="control-btn utility-btn">T</button>
+        <button id="btn-unstuck" class="control-btn utility-btn">G</button>
+        <button id="btn-menu" class="control-btn utility-btn">M</button>
+      </div>
+      <div class="control-group trick-controls">
+        <button id="btn-trick1" class="control-btn trick-btn">🌀</button>
+        <button id="btn-roar" class="control-btn trick-btn">🗣️</button>
+        <button id="btn-dance" class="control-btn trick-btn">💃</button>
+        <button id="btn-multijump" class="control-btn trick-btn">🦘</button>
+      </div>
+    </div>
+
+    <script src="src/assets.js"></script>
+    <script src="src/input.js"></script>
+    <script src="src/mobile.js"></script>
+    <script src="src/tiles.js"></script>
+    <script src="src/physics.js"></script>
+    <script src="src/camera.js"></script>
+    <script src="src/enemies.js"></script>
+    <script src="src/level1.js"></script>
+    <script src="src/level2.js"></script>
+    <script src="src/level3.js"></script>
+    <script src="src/level4.js"></script>
+    <script src="src/level5.js"></script>
+    <script src="src/level6.js"></script>
+    <script src="src/level7.js"></script>
+    <script src="src/level8.js"></script>
+    <script src="src/level9.js"></script>
+    <script src="src/level10.js"></script>
+    <script src="src/levels11-20.js"></script>
+    <script src="src/main.js"></script>
+  </body>
+  </html>
+
+

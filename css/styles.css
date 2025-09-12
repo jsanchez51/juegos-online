@@ -1,0 +1,219 @@
+:root {
+  --bg: #0b1020;
+  --fg: #e8f0ff;
+  --accent: #41b3ff;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: radial-gradient(circle at 50% 20%, #0f1a3a, var(--bg));
+  color: var(--fg);
+  font-family: 'Rubik', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+#ui {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+#ui h1 {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+
+.controls { font-size: 12px; opacity: 0.9; }
+
+canvas#game {
+  display: block;
+  width: min(100vw, 960px);
+  height: calc(min(100vw, 960px) * 9 / 16);
+  max-height: 70vh;
+  margin: 5vh auto;
+  border-radius: 12px;
+  background: #6db3f2;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+/* Mobile Controls */
+#mobile-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25vh;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.left-controls {
+  flex-direction: row;
+  gap: 15px;
+}
+
+.center-controls {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right-controls {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.utility-controls {
+  flex-direction: row;
+  gap: 8px;
+}
+
+.trick-controls {
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  transition: all 0.15s ease;
+}
+
+.control-btn:active {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(0.95);
+}
+
+.move-btn {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.jump-btn {
+  width: 80px;
+  height: 50px;
+  font-size: 14px;
+  background: rgba(76, 175, 80, 0.3);
+  border-color: rgba(76, 175, 80, 0.6);
+}
+
+.run-btn {
+  width: 80px;
+  height: 35px;
+  font-size: 11px;
+  background: rgba(33, 150, 243, 0.3);
+  border-color: rgba(33, 150, 243, 0.6);
+}
+
+.superjump-btn {
+  width: 80px;
+  height: 40px;
+  font-size: 10px;
+  background: rgba(255, 193, 7, 0.4);
+  border-color: rgba(255, 193, 7, 0.7);
+  font-weight: bold;
+}
+
+.fly-btn {
+  width: 70px;
+  height: 45px;
+  font-size: 12px;
+  background: rgba(156, 39, 176, 0.3);
+  border-color: rgba(156, 39, 176, 0.6);
+}
+
+.fire-btn {
+  width: 70px;
+  height: 45px;
+  font-size: 12px;
+  background: rgba(255, 87, 34, 0.3);
+  border-color: rgba(255, 87, 34, 0.6);
+}
+
+.utility-btn {
+  width: 35px;
+  height: 35px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.trick-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  background: rgba(233, 30, 99, 0.3);
+  border-color: rgba(233, 30, 99, 0.6);
+}
+
+/* Hide mobile controls on desktop */
+@media (min-width: 768px) and (pointer: fine) {
+  #mobile-controls {
+    display: none;
+  }
+  
+  canvas#game {
+    max-height: 90vh;
+    margin: 10vh auto;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 767px) {
+  #ui {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 95%;
+    font-size: 12px;
+  }
+  
+  #ui h1 {
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  
+  .controls {
+    font-size: 10px;
+  }
+  
+  canvas#game {
+    width: 100vw;
+    height: 70vh;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+
