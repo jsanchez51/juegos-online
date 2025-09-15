@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chimuelo-platformer.vercel.app/sitemap.xml
+

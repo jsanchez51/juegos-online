@@ -11,6 +11,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Chimuelo Platformer: juego de plataformas gratuito para navegador. Corre, salta, vuela y lanza fuego a enemigos. Compatible con móvil y PC.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://chimuelo-platformer.vercel.app/">
+    <meta property="og:title" content="Chimuelo Platformer (demo)">
+    <meta property="og:description" content="Juego de plataformas gratuito en navegador: corre, salta, vuela y lanza fuego.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Chimuelo Platformer (demo)">
+    <meta name="twitter:description" content="Juego de plataformas gratuito en navegador: corre, salta, vuela y lanza fuego.">
+    <meta name="theme-color" content="#111111">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4613382667340695" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Chimuelo Platformer",
+      "url": "https://chimuelo-platformer.vercel.app/",
+      "description": "Juego de plataformas gratuito para navegador. Corre, salta, vuela y lanza fuego.",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web",
+      "genre": "Plataformas",
+      "gamePlatform": "Web browser",
+      "inLanguage": "es",
+      "author": { "@type": "Person", "name": "Indatech" }
+    }
+    </script>
   </head>
   <body>
     <div id="ui">
@@ -19,6 +46,11 @@
         <span>Controles: A/D o ←/→ mover, W/↑/Espacio saltar, Shift correr, F volar, X fuego. Z giro, V rugido, B baile, N saltos múltiples. R reiniciar, T teletransporte, G liberarse, M menú niveles.</span>
       </div>
     </div>
+
+    <section id="descripcion" style="max-width:960px;margin:16px auto;padding:0 12px;color:#333;font-size:14px;line-height:1.6;">
+      <h2 style="font-size:16px;margin:0 0 8px 0;">Juego de plataformas gratis en tu navegador</h2>
+      <p>Chimuelo Platformer es un juego de plataformas 2D para navegador. Corre, salta, vuela y lanza fuego para superar niveles y enemigos. Funciona en PC y móviles, sin instalación.</p>
+    </section>
     <canvas id="game" width="960" height="540"></canvas>
     
     <!-- Mobile Controls -->
@@ -69,6 +101,42 @@
     <script src="src/level10.js"></script>
     <script src="src/levels11-20.js"></script>
     <script src="src/main.js"></script>
+
+    <div id="ad-bar">
+      <button id="ad-bar-close" aria-label="Cerrar anuncio">×</button>
+      <!-- horizon -->
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-4613382667340695"
+           data-ad-slot="1665498820"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+    <div id="ad-bar-spacer"></div>
+    <script>
+      (function() {
+        var bar = document.getElementById('ad-bar');
+        var spacer = document.getElementById('ad-bar-spacer');
+        function setSpacer() {
+          if (!bar || !spacer) return;
+          var isMobile = window.matchMedia('(max-width: 767px)').matches && window.matchMedia('(pointer: coarse)').matches;
+          spacer.style.height = isMobile ? '0px' : (bar.offsetHeight ? (bar.offsetHeight + 'px') : '90px');
+        }
+        setSpacer();
+        window.addEventListener('load', setSpacer);
+        window.addEventListener('resize', setSpacer);
+        var btn = document.getElementById('ad-bar-close');
+        if (btn) {
+          btn.addEventListener('click', function() {
+            bar.style.display = 'none';
+            setSpacer();
+          });
+        }
+      })();
+    </script>
   </body>
   </html>
 
