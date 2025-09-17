@@ -5,7 +5,10 @@
     { "src": "index.html", "use": "@vercel/static" },
     { "src": "css/styles.css", "use": "@vercel/static" },
     { "src": "src/**/*", "use": "@vercel/static" },
-    { "src": "assets/**/*", "use": "@vercel/static" }
+    { "src": "assets/**/*", "use": "@vercel/static" },
+    { "src": "robots.txt", "use": "@vercel/static" },
+    { "src": "sitemap.xml", "use": "@vercel/static" },
+    { "src": "ads.txt", "use": "@vercel/static" }
   ],
   "headers": [
     {
