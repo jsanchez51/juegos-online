@@ -53,14 +53,17 @@
 
   let tiles = currentLevelData.tiles;
   window.currentTiles = tiles; // make tiles globally available for physics
-  // Load optional assets (you can replace these paths later)
-  Assets.loadImage('player', 'assets/player.png');
-  Assets.loadAudio('jump', 'assets/jump.wav', { volume: 0.35 });
-  Assets.loadImage('enemy', 'assets/enemy.png');
-  Assets.loadAudio('stomp', 'assets/stomp.wav', { volume: 0.4 });
-  Assets.loadAudio('hit', 'assets/hit.wav', { volume: 0.4 });
-  Assets.loadAudio('fire', 'assets/fire.wav', { volume: 0.5 });
-  Assets.loadAudio('collect', 'assets/collect.wav', { volume: 0.3 });
+  // Optional external assets. Set to true only if you upload files in /assets
+  const ENABLE_OPTIONAL_ASSETS = false;
+  if (ENABLE_OPTIONAL_ASSETS) {
+    Assets.loadImage('player', 'assets/player.png');
+    Assets.loadImage('enemy', 'assets/enemy.png');
+    Assets.loadAudio('jump', 'assets/jump.wav', { volume: 0.35 });
+    Assets.loadAudio('stomp', 'assets/stomp.wav', { volume: 0.4 });
+    Assets.loadAudio('hit', 'assets/hit.wav', { volume: 0.4 });
+    Assets.loadAudio('fire', 'assets/fire.wav', { volume: 0.5 });
+    Assets.loadAudio('collect', 'assets/collect.wav', { volume: 0.3 });
+  }
 
   // Collectibles and projectiles
   let collectibles = [];
