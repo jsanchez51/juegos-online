@@ -11,13 +11,6 @@
     { "src": "ads.txt", "use": "@vercel/static" },
     { "src": "chimuelo.png", "use": "@vercel/static" }
   ],
-  "routes": [
-    { "src": "/favicon.ico", "dest": "/chimuelo.png" },
-    { "src": "/apple-touch-icon(.*)", "dest": "/chimuelo.png" },
-    { "src": "/android-chrome-192x192.png", "dest": "/chimuelo.png" },
-    { "src": "/android-chrome-512x512.png", "dest": "/chimuelo.png" },
-    { "src": "/manifest.json", "dest": "/manifest.json" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
